@@ -1,10 +1,10 @@
 # PythonStudy
 ## Usage
-'''bash
+```bash
 from MercyStudy import *
 
 dec_convert.bin_float(59.05)
-'''
+```
 
 
 ## Contributing
