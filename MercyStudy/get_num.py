@@ -1,4 +1,5 @@
 
+
 # return integer of float num
 def get_integer_from_float(float_num):
     if not isinstance(float_num, float):
