@@ -61,3 +61,31 @@ def true_to_radix(_num):
     for i in _list:
         _result += i
     return _result
+
+
+def true_to_complement(_num):
+    _num = true_to_radix(_num)
+    if _num == 0:
+        return 0
+    _list = []
+    _count = 0
+    _result = ''
+    for i in _num:
+        _list.append(i)
+    if _list[0] == '0':
+        return _num
+    if _list[7] == '0':
+        _list[7] = '1'
+    if _list[7] == '1':
+        _list[7] = '0'
+        _list[6] = int(_list[6]) + 1
+        while _count < 7:
+            if _list[6 - _count] < 2:
+                _list[6 - _count] = str(_list[6 - _count])
+                break
+            if _list[6 - _count] > 1:
+                _list[6 - _count] = '0'
+                _list[5 - _count] = int(_list[5 - _count]) + 1 if 5 - _count > -1 else None
+    for i in _list:
+        _result += i
+    return _result
